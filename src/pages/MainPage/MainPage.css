@@ -1,0 +1,16 @@
+.main__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main__block_items h2 {
+  font-weight: bold;
+  font-size: 80px;
+  color: #3a1212;
+  text-align: center;
+}
+.main__block_items p {
+  font-size: 22px;
+  color: #504747;
+  text-align: center;
+}

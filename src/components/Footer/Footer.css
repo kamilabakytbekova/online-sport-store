@@ -1,0 +1,21 @@
+.footer {
+  margin-top: 100px;
+  background: rgb(29, 28, 28);
+  height: 340px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.938);
+}
+
+.footer_left {
+  width: 333px;
+}
+.footer_right {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 800px;
+}

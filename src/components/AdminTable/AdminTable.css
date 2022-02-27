@@ -1,0 +1,10 @@
+#table_head {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(201, 77, 5);
+}
+#table_body {
+  font-size: 17px;
+  font-weight: bold;
+  color: rgba(2, 2, 53, 0.87);
+}

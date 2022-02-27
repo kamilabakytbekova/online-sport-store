@@ -1,0 +1,19 @@
+.add-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.add-page img {
+  width: 450px;
+  margin-top: 50px;
+}
+.add-form form {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+}
+.add-form textarea {
+  margin: 10px 0px;
+  outline: none;
+  font-size: 16px;
+}
