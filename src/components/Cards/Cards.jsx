@@ -13,7 +13,10 @@ export default function Cards(props) {
     React.useContext(ClientContext);
   return (
     <Container>
-      <Card style={{ marginTop: "50px" }} sx={{ maxWidth: 345 }}>
+      <Card
+        style={{ marginTop: "50px", width: "18rem", height: "500px" }}
+        sx={{ position: "relative", maxWidth: 345 }}
+      >
         <CardMedia
           component="img"
           height="200"
@@ -26,13 +29,19 @@ export default function Cards(props) {
             {props.item.name}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            {props.item.descr}
+            {props.item.descr.length > 250 ? (
+              <>{props.item.descr.slice(0, 200)}</>
+            ) : (
+              <>{props.item.descr}</>
+            )}
           </Typography>
           <Typography gutterBottom variant="h6" component="div">
             {props.item.price} $
           </Typography>
         </CardContent>
-        <CardActions>
+        <CardActions
+          sx={{ position: "absolute", bottom: "10 px", left: "10px" }}
+        >
           {checkInCart(props.item.id) ? (
             <Button onClick={() => deleteFromCart(props.item.id)} size="small">
               Added
