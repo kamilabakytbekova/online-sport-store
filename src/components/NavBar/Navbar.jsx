@@ -11,7 +11,7 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import { Link } from "react-router-dom";
-import { Badge, createTheme, Icon, ThemeProvider } from "@mui/material";
+import { Badge, createTheme, ThemeProvider } from "@mui/material";
 import { Logout, ShoppingCart } from "@mui/icons-material";
 import logo from "./../../images/logo.png";
 import { ClientContext } from "../../context/ClientProvider";
