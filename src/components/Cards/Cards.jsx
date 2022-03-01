@@ -7,6 +7,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { Container } from "@mui/material";
 import { ClientContext } from "../../context/ClientProvider";
+import { Link } from "react-router-dom";
 
 export default function Cards(props) {
   const { addToCart, checkInCart, deleteFromCart } =
@@ -51,8 +52,9 @@ export default function Cards(props) {
               Add
             </Button>
           )}
-
-          <Button size="small">Details</Button>
+          <Link to={`/product-detail/${props.item.id}`}>
+            <Button size="small">Details</Button>
+          </Link>
         </CardActions>
       </Card>
     </Container>

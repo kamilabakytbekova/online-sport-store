@@ -10,6 +10,7 @@ const INIT_STATE = {
     ? JSON.parse(localStorage.getItem("carts")).products.length
     : 0,
   carts: null,
+  detail: null,
 };
 
 const reducer = (state, action) => {
@@ -22,6 +23,8 @@ const reducer = (state, action) => {
       return { ...state, cartCount: action.payload };
     case "GET_CARTS":
       return { ...state, carts: action.payload };
+    case "GET_DETAIL":
+      return { ...state, detail: action.payload };
     default:
       return state;
   }
@@ -154,6 +157,18 @@ const ClientProvider = (props) => {
     getCarts();
   };
 
+  const getDetail = async (id) => {
+    try {
+      const response = await axios(`${API}/${id}`);
+      let action = {
+        type: "GET_DETAIL",
+        payload: response.data,
+      };
+      dispatch(action);
+    } catch (err) {
+      console.log(err);
+    }
+  };
   return (
     <ClientContext.Provider
       value={{
@@ -164,12 +179,14 @@ const ClientProvider = (props) => {
         deleteFromCart,
         changeCount,
         getCarts,
+        getDetail,
         totalProductsCount,
         productPerPage,
         currentPage,
         products: currentProduct,
         cartCount: state.cartCount,
         carts: state.carts,
+        detail: state.detail,
       }}
     >
       {props.children}

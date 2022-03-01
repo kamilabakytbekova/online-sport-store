@@ -1,0 +1,19 @@
+.detail-page {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+}
+.detail-right li {
+  list-style-type: none;
+  font-size: 20px;
+  color: rgb(201, 77, 5);
+}
+.detail-right h2 {
+  color: rgba(2, 2, 53, 0.87);
+}
+#price {
+  font-weight: bold;
+  margin: 10px;
+  color: rgba(2, 2, 53, 0.87);
+}

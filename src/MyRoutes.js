@@ -11,6 +11,7 @@ import AdminPage from "./pages/AdminPage/AdminPage";
 import EditPage from "./pages/EditPage/EditPage";
 import CartPage from "./pages/CartPage/CartPage";
 import AuthProvider from "./context/AuthProvider";
+import DetailPage from "./pages/DetailPage/DetailPage";
 
 const MyRoutes = () => {
   return (
@@ -26,6 +27,7 @@ const MyRoutes = () => {
               <Route path="/admin-panel" element={<AdminPage />} />
               <Route path="/admin-panel/edit/:id" element={<EditPage />} />
               <Route path="/cart" element={<CartPage />} />
+              <Route path="/product-detail/:id" element={<DetailPage />} />
             </Routes>
             <Footer />
           </BrowserRouter>
