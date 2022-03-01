@@ -1,8 +1,14 @@
 .detail-page {
   display: flex;
   justify-content: space-between;
-  text-align: center;
   align-items: center;
+}
+.detail-left {
+  width: 50%;
+}
+
+.detail-right {
+  width: 50%;
 }
 .detail-right li {
   list-style-type: none;
@@ -14,6 +20,5 @@
 }
 #price {
   font-weight: bold;
-  margin: 10px;
   color: rgba(2, 2, 53, 0.87);
 }

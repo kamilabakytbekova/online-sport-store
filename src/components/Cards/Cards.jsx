@@ -44,11 +44,19 @@ export default function Cards(props) {
           sx={{ position: "absolute", bottom: "10 px", left: "10px" }}
         >
           {checkInCart(props.item.id) ? (
-            <Button onClick={() => deleteFromCart(props.item.id)} size="small">
+            <Button
+              onClick={() => deleteFromCart(props.item.id)}
+              size="small"
+              style={{ color: "rgb(201, 77, 5)" }}
+            >
               Added
             </Button>
           ) : (
-            <Button onClick={() => addToCart(props.item)} size="small">
+            <Button
+              style={{ color: "rgb(201, 77, 5)" }}
+              onClick={() => addToCart(props.item)}
+              size="small"
+            >
               Add
             </Button>
           )}

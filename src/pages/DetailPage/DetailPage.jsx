@@ -1,4 +1,4 @@
-import { Container } from "@mui/material";
+import { Button, Container } from "@mui/material";
 import "./DetailPage.css";
 import React, { useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
@@ -6,6 +6,8 @@ import { ClientContext } from "../../context/ClientProvider";
 
 const DetailPage = () => {
   const params = useParams();
+  const { addToCart, checkInCart, deleteFromCart } =
+    React.useContext(ClientContext);
 
   const { getDetail, detail } = useContext(ClientContext);
 
@@ -35,6 +37,28 @@ const DetailPage = () => {
               <li> {detail.descr}</li>
               <li id="price">Price: {detail.price}</li>
             </ul>
+
+            {checkInCart(detail.id) ? (
+              <Button
+                onClick={() => deleteFromCart(detail.id)}
+                style={{ marginTop: "40px", marginLeft: "45px" }}
+                size="small"
+                color="warning"
+                variant="contained"
+              >
+                Added
+              </Button>
+            ) : (
+              <Button
+                onClick={() => addToCart(detail)}
+                style={{ marginTop: "40px", marginLeft: "45px" }}
+                size="small"
+                color="warning"
+                variant="contained"
+              >
+                Add
+              </Button>
+            )}
           </div>
         </div>
       </Container>

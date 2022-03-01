@@ -73,8 +73,8 @@ const FilterBlock = () => {
           value={priceValue}
           onChange={(e) => filterProducts("price_lte", e.target.value)}
           valueLabelDisplay="auto"
-          max={500}
-          step={5}
+          max={100}
+          step={1}
         />
       </div>
       <div>
